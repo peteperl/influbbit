@@ -13,7 +13,7 @@ Coming soon...
 
 ### Details
 
-V1 of Influbbit pulls stats from InfluxDB on your Kubernetes cluster and sends to a RabbitMQ server you specify. Multiple clusters can send data to the same RabbitMQ server.
+V1: Pulls stats from InfluxDB on your Kubernetes cluster every 30s and sends to a RabbitMQ server you specify. Multiple clusters can send data to the same RabbitMQ server.
 This centralized data can then be pulled from RabbitMQ and displayed on the present Kubernetes dashboard and future analytics dashboards.
 
 Coming soon:
