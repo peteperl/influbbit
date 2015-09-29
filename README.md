@@ -16,7 +16,7 @@ Coming soon...
 v1: Pulls stats from InfluxDB on your Kubernetes cluster every 60s and sends to a RabbitMQ server you specify. Multiple clusters can send data to the same RabbitMQ server.
 This centralized data can then be pulled from RabbitMQ and displayed on the present Kubernetes dashboard and future analytics dashboards.
 
-### Coming soon:
+### Roadmap
 
 v1.1: Configure the period in which the data is pulled.
 
