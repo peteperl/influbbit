@@ -4,7 +4,7 @@ Influbbit is a Python service to pull data from the InfluxDB database used by He
 and send that information to a remote RabbitMQ server outside of Kubernetes
 
 ## To Run
-curl -s https://raw.githubusercontent.com/peteper2001/nflbtemp/master/k8s/influbbit-launch.sh | bash -s
+curl -s https://raw.githubusercontent.com/peteper2001/nflbtemp/master/k8s/influbbit-launch.sh | /bin/bash
 
 ## Code Organization
 
