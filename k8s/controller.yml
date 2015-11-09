@@ -1,0 +1,65 @@
+kind: ReplicationController
+apiVersion: v1
+metadata:
+  name: influbbit
+spec:
+  replicas: 1
+  selector:
+    name: influbbit
+    version: "1"
+  nodeSelector:
+    name: "{INFLUX_NODE_NAME}"
+  template:
+    metadata:
+      labels:
+        name: influbbit
+        version: "1"
+    spec:
+      volumes:
+      - name: influbbitdata
+        hostPath:
+          path: /var/lib/influbbit
+      containers:
+      - name: influbbit
+        image: blancsys/influbbit:latest
+        imagePullPolicy: Always
+        volumeMounts:
+        - name: influbbitdata
+          mountPath: /var/lib/influbbit
+        env:
+        - name: DEBUG_MODE
+          value: "{DEBUG_MODE}"
+        - name: IDLE_WAIT_SECS
+          value: "{IDLE_WAIT_SECS}"
+        - name: CLUSTER_NAME
+          value: "{CLUSTER_NAME}"
+        - name: CLUSTER_IP
+          value: "{CLUSTER_IP}"
+        - name: INFLUX_HOST
+          value: "{INFLUX_HOST}"
+        - name: INFLUX_PORT
+          value: "{INFLUX_PORT}"
+        - name: INFLUX_USER
+          value: "{INFLUX_USER}"
+        - name: INFLUX_PWD
+          value: "{INFLUX_PWD}"
+        - name: INFLUX_DB
+          value: "{INFLUX_DB}"
+        - name: INFLUX_BATCH
+          value: "{INFLUX_BATCH}"
+        - name: RABBIT_HOST
+          value: "{RABBIT_HOST}"
+        - name: RABBIT_PORT
+          value: "{RABBIT_PORT}"
+        - name: RABBIT_VHOST
+          value: "{RABBIT_VHOST}"
+        - name: RABBIT_USER
+          value: "{RABBIT_USER}"
+        - name: RABBIT_PWD
+          value: "{RABBIT_PWD}"
+        - name: RABBIT_QUEUE
+          value: "{RABBIT_QUEUE}"
+        - name: RABBIT_EXCHANGE
+          value: "{RABBIT_EXCHANGE}"
+        - name: RABBIT_BATCH
+          value: "{RABBIT_BATCH}"
