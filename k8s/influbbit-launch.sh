@@ -51,8 +51,8 @@ export CONTEXT=$(kubectl config view | grep current-context | awk '{print $2}')
 kubectl config set-context $CONTEXT --namespace=$NAMESPACE
 
 # Download files
-curl -s https://raw.githubusercontent.com/peteper2001/nflbtemp/master/k8s/controller.yml > $INFLUBBIT_DIR/controller.yml
-curl -s https://raw.githubusercontent.com/peteper2001/nflbtemp/master/k8s/dockersecret.yml > $INFLUBBIT_DIR/dockersecret.yml
+curl -s https://raw.githubusercontent.com/peteperl/influbbit/master/k8s/controller.yml > $INFLUBBIT_DIR/controller.yml
+curl -s https://raw.githubusercontent.com/peteperl/influbbit/master/k8s/dockersecret.yml > $INFLUBBIT_DIR/dockersecret.yml
 
 # Delete old copy of Influbbit controller
 echo "Uninstalling any previous version of Influbbit..."
