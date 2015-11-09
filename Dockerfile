@@ -5,7 +5,7 @@
 ##########################################################
 
 FROM ubuntu:14.04
-MAINTAINER PetePerlegos
+MAINTAINER PetePerlegos(peteperl)
 ENV REFRESHED_AT 2015-11-09
 
 # Volume for sqlite file
