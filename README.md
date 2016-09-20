@@ -6,8 +6,6 @@ and send that information to a remote RabbitMQ server outside of Kubernetes
 ## To Run
 
     curl -s https://raw.githubusercontent.com/peteperl/influbbit/master/k8s/influbbit-launch.sh | /bin/bash
-  
-(More instructions and comments will be updated in the next day.))
 
 ## Code Organization
 
